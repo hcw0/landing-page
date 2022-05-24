@@ -87,7 +87,8 @@ li > a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 3em;
+    padding-bottom: 6em;
 }
 
 .body-second-header > h1 {
@@ -121,3 +122,31 @@ li > a:hover {
 .content {
     font-size: 1.2em;
 }
+
+.quote-section {
+    background-color: #caf0f8;
+    padding-top: 8em;
+    padding-bottom: 8em;
+    justify-content: center;
+    align-items: center;
+}
+
+.actual-quote, .person-quoted {
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+.actual-quote > p {
+    font-size: 3em;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+
+.person-quoted > p {
+    margin-top: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+}
+

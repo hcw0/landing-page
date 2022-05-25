@@ -10,25 +10,26 @@ body {
 
 .header {
     background: transparent;
-    box-shadow: 0px 2px 0px rgba(128,128,128, .15);
     position: sticky; 
     top: 0;
-    background-color: #E0ECF3;
+    background-color: rgba(0, 0, 0, 1);
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0.95;
 }
 
 a, a:hover, a:visited, a:active {
     text-decoration: none; 
-    color: inherit;
+    color: white;
 }
 
 .home {
     margin-left: 1em;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 3em;
+    color: white;
 }
 
 ul {
@@ -37,20 +38,66 @@ ul {
     gap: 1em;
 }
 
-ul:last-child {
+ul > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul > div:last-child {
     margin-right: 1em;
 }
 
+
 li > a {
+    font-size: 1.2em;
     margin: 0 -.25rem;
-    padding: 0 auto;
-    box-shadow: inset 0 0 0 0 rgb(191, 25, 25);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    padding: 0 .8em;
+
 }
 
-li > a:hover {
-    box-shadow: inset 100px 0 0 0 rgb(230, 14, 14);
+.link {
+    padding: 0;
+    display: inline-block;
+    position: relative;
     color: black;
+}
+
+.links>li:first-child {
+    margin-right: 2em; 
+}
+
+.links>li:last-child {
+    margin-right: 0.5em;
+}
+  
+.links > li:hover {
+    border-bottom: .1em solid #0087ca;
+}
+
+.buttons {
+    display: flex;
+    gap: .8em;
+}
+
+.button {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0.4em 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    color: white;
+    background-color: #0087ca;
 }
 
 .body-first {
@@ -106,6 +153,15 @@ li > a:hover {
     justify-content: center;
 }
 
+.frame > img {
+    background-repeat: no-repeat;
+    border-radius: .5em;
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+}
+
 .frames {
     display: flex;
     flex-direction: column;
@@ -114,7 +170,7 @@ li > a:hover {
 }
 
 .frame {
-    border: 5px solid #6EA5C9;
+    border: 7px solid #6EA5C9;
     height: 15em;
     width: 15em;
     border-radius: 1em;
@@ -156,7 +212,12 @@ li > a:hover {
     justify-content: center;
     align-items: center;
     height: 20em;
-
+    flex-wrap: wrap;
+    background: url(./images/bridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-attachment: fixed;
 }
 
 .call-to-action-container {
@@ -168,6 +229,19 @@ li > a:hover {
     padding: 2em;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 850px) {
+    .info {
+        width: 40vw;
+        justify-content: center;
+    }
+    .info > p {
+        width: 40vw;
+        display: inline;
+        padding-bottom: 1em;
+    }
 }
 
 .info > h1 {
@@ -176,14 +250,15 @@ li > a:hover {
 }
 
 .info > p {
+
     width: 30em;
     margin-top: .2em;
     color: white;
 }
 
 .call-to-action-container a:hover{
-    color:#DDDDDD;
-    border-color:#DDDDDD;
+    color: black;
+    background-color: white;
 }
 
 .call-to-action-container a {
@@ -210,5 +285,17 @@ li > a:hover {
     position: relative;
     bottom: 0;
     height: 10vh;
-    background-color: black;
+    background-color: #ced4da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > h3 {
+    color: black;
+}
+
+.footer > h3 > a {
+    color: black;
+    text-decoration: underline;
 }
